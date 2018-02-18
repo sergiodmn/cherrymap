@@ -16,3 +16,5 @@ optional arguments:
   -a, --all        same as '-ah -ap'
 ```
 
+![alt text](https://github.com/sergiodmn/cherrymap/blob/master/example/example1.png "Example 1")
+![alt text](https://github.com/sergiodmn/cherrymap/blob/master/example/example2.png "Example 2")
