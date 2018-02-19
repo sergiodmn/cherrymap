@@ -1,5 +1,5 @@
 # Cherrymap
-Export Nmap scans logs to Cherrytree
+Import Nmap scans logs to Cherrytree
 
 Useful script to assist you during infrastructure assessments, importing to Cherrytree (https://www.giuspen.com/cherrytree/) results of Nmap scans.
 
