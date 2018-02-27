@@ -1,4 +1,4 @@
-<cherrytree><node custom_icon_id="0" foreground="" is_bold="False" name="scanme" prog_lang="custom-colors" readonly="False" tags="" unique_id="1"><rich_text># Nmap 7.60SVN scan initiated Sun Feb 18 16:30:58 2018 as: nmap -A -oA scanme scanme.nmap.org
+<cherrytree><node custom_icon_id="14" foreground="" is_bold="True" name="scanme" prog_lang="custom-colors" readonly="False" tags="" unique_id="1"><rich_text># Nmap 7.60SVN scan initiated Sun Feb 18 16:46:36 2018 as: nmap -A -oA scanme -sV scanme.nmap.org
 Nmap scan report for scanme.nmap.org (45.33.32.156)
 Host is up (0.17s latency).
 Other addresses for scanme.nmap.org (not scanned): 2600:3c01::f03c:91ff:fe18:bb2f
@@ -18,9 +18,9 @@ PORT      STATE SERVICE    VERSION
 Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
-# Nmap done at Sun Feb 18 16:31:43 2018 -- 1 IP address (1 host up) scanned in 44.95 seconds
-</rich_text><node foreground="" is_bold="False" name="45.33.32.156" prog_lang="custom-colors" readonly="False" tags="" unique_id="2"><rich_text>['scanme.nmap.org', 'scanme.nmap.org']
-</rich_text><node foreground="" is_bold="False" name="22/tcp - ssh" prog_lang="custom-colors" readonly="False" tags="" unique_id="3"><rich_text style="italic" weight="heavy">Banner:
+# Nmap done at Sun Feb 18 16:47:24 2018 -- 1 IP address (1 host up) scanned in 47.67 seconds
+</rich_text><node custom_icon_id="3" foreground="" is_bold="False" name="45.33.32.156" prog_lang="custom-colors" readonly="False" tags="" unique_id="2"><rich_text>['scanme.nmap.org', 'scanme.nmap.org']
+</rich_text><node custom_icon_id="39" foreground="" is_bold="False" name="Enumeration" prog_lang="custom-colors" readonly="False" tags="" unique_id="3"><rich_text /><node custom_icon_id="18" foreground="" is_bold="False" name="TCP" prog_lang="custom-colors" readonly="False" tags="" unique_id="4"><node foreground="" is_bold="False" name="22/tcp - ssh" prog_lang="custom-colors" readonly="False" tags="" unique_id="13"><rich_text style="italic" weight="heavy">Banner:
 </rich_text><rich_text>product: OpenSSH version: 6.6.1p1 Ubuntu 2ubuntu2.10 extrainfo: Ubuntu Linux; protocol 2.0 ostype: Linux
 
 
@@ -31,7 +31,7 @@ Service detection performed. Please report any incorrect results at https://nmap
   2048 20:3d:2d:44:62:2a:b0:5a:9d:b5:b3:05:14:c2:a6:b2 (RSA)
   256 96:02:bb:5e:57:54:1c:4e:45:2f:56:4c:4a:24:b2:57 (ECDSA)
   256 33:fa:91:0f:e0:e1:7b:1f:6d:05:a2:b0:f1:54:41:56 (ED25519)
-</rich_text></node><node foreground="" is_bold="False" name="80/tcp - http" prog_lang="custom-colors" readonly="False" tags="" unique_id="4"><rich_text style="italic" weight="heavy">Banner:
+</rich_text></node><node foreground="" is_bold="False" name="80/tcp - http" prog_lang="custom-colors" readonly="False" tags="" unique_id="14"><rich_text style="italic" weight="heavy">Banner:
 </rich_text><rich_text>product: Apache httpd version: 2.4.7 extrainfo: (Ubuntu)
 
 
@@ -40,14 +40,19 @@ Service detection performed. Please report any incorrect results at https://nmap
 </rich_text><rich_text>Apache/2.4.7 (Ubuntu)
 </rich_text><rich_text weight="heavy">http-title
 </rich_text><rich_text>Go ahead and ScanMe!
-</rich_text></node><node foreground="" is_bold="False" name="9929/tcp - nping-echo" prog_lang="custom-colors" readonly="False" tags="" unique_id="5"><rich_text style="italic" weight="heavy">Banner:
+</rich_text></node><node foreground="" is_bold="False" name="9929/tcp - nping-echo" prog_lang="custom-colors" readonly="False" tags="" unique_id="15"><rich_text style="italic" weight="heavy">Banner:
 </rich_text><rich_text>product: Nping echo
 
 
 </rich_text><rich_text style="italic" weight="heavy">Scripts:
-</rich_text></node><node foreground="" is_bold="False" name="31337/tcp - tcpwrapped" prog_lang="custom-colors" readonly="False" tags="" unique_id="6"><rich_text style="italic" weight="heavy">Banner:
+</rich_text></node><node foreground="" is_bold="False" name="31337/tcp - tcpwrapped" prog_lang="custom-colors" readonly="False" tags="" unique_id="16"><rich_text style="italic" weight="heavy">Banner:
 </rich_text><rich_text>
 
 
 </rich_text><rich_text style="italic" weight="heavy">Scripts:
-</rich_text></node></node></node></cherrytree>
+</rich_text></node></node><node custom_icon_id="18" foreground="" is_bold="False" name="UDP" prog_lang="custom-colors" readonly="False" tags="" unique_id="5" /><node custom_icon_id="44" foreground="" is_bold="False" name="Other Outputs" prog_lang="custom-colors" readonly="False" tags="" unique_id="6"><node custom_icon_id="18" foreground="" is_bold="False" name="Dirb\DirBuster" prog_lang="custom-colors" readonly="False" tags="" unique_id="7" /></node></node><node custom_icon_id="22" foreground="" is_bold="False" name="Exploitation" prog_lang="custom-colors" readonly="False" tags="" unique_id="8"><rich_text underline="single" weight="heavy">Vulnerability:
+
+
+
+</rich_text><rich_text underline="single" weight="heavy">Exploit used:
+</rich_text></node><node custom_icon_id="21" foreground="" is_bold="False" name="PostExploitation" prog_lang="custom-colors" readonly="False" tags="" unique_id="9"><node custom_icon_id="44" foreground="" is_bold="False" name="Script Results" prog_lang="custom-colors" readonly="False" tags="" unique_id="10" /><node custom_icon_id="15" foreground="" is_bold="False" name="Priv Escalation" prog_lang="custom-colors" readonly="False" tags="" unique_id="11" /></node><node custom_icon_id="10" foreground="" is_bold="False" name="Findings\Flags" prog_lang="custom-colors" readonly="False" tags="" unique_id="12" /></node></node></cherrytree>
