@@ -73,9 +73,9 @@ for filename in os.listdir(path):
 					if not _service.open():
 						color="#ff0000"
 					if _service.protocol == 'tcp':
-						service = ET.SubElement(TCP, "node", foreground="", is_bold="False", name=str(_service.port) + "/" + _service.protocol + " - " + _service.service, prog_lang="custom-colors", readonly="False", tags="", unique_id=str(uid))
+						service = ET.SubElement(TCP, "node", custom_icon_id="12", foreground="", is_bold="False", name=str(_service.port) + "/" + _service.protocol + " - " + _service.service, prog_lang="custom-colors", readonly="False", tags="", unique_id=str(uid))
 					else:
-						service = ET.SubElement(UDP, "node", foreground="", is_bold="False", name=str(_service.port) + "/" + _service.protocol + " - " + _service.service, prog_lang="custom-colors", readonly="False", tags="", unique_id=str(uid))
+						service = ET.SubElement(UDP, "node", custom_icon_id="12", foreground="", is_bold="False", name=str(_service.port) + "/" + _service.protocol + " - " + _service.service, prog_lang="custom-colors", readonly="False", tags="", unique_id=str(uid))
 					uid=uid+1
 					ET.SubElement(service, "rich_text", style="italic", weight="heavy").text="Banner:\n"
 					ET.SubElement(service, "rich_text").text=_service.banner+"\n\n\n"
