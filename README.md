@@ -7,6 +7,9 @@ Note that both XML and .nmap files have to be present in the same folder. We rec
 
 In case of merging the data into another CherryTree file (`-m` option), the utility will insert it as last node, with the filename as node name. 
 
+
+## Usage
+
 ```
 usage: cherrymap.py [-h] [-ah] [-ap] [-a] [-m dest_file] file
 
@@ -21,5 +24,9 @@ optional arguments:
   -m, --merge      Specify a CherryTree destination file in which to write the contents
 ```
 
-![alt text](https://github.com/sergiodmn/cherrymap/blob/master/example/example1.png "Example 1")
-![alt text](https://github.com/sergiodmn/cherrymap/blob/master/example/example2.png "Example 2")
+## Examples
+
+![alt text](https://github.com/3isenHeiM/cherrymap/blob/master/example/example1.png "Example 1")
+![alt text](https://github.com/3isenHeiM/cherrymap/blob/master/example/example2.png "Example 2")
+
+![alt text](https://github.com/3isenHeiM/cherrymap/blob/master/example/example3.png "Example 3 : Merging into existing file")
