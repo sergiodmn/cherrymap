@@ -29,7 +29,7 @@ try:
 except:
     print("Error while parsing file " + filename)
 
-if dest_file == "":
+if dest_file is None :
     node = ET.SubElement(root, "node", custom_icon_id="0", foreground="", is_bold="False", name=os.path.basename(filename), prog_lang="custom-colors", readonly="False", tags="", unique_id=str(uid))
     uid=uid+1
 else :
@@ -76,7 +76,7 @@ for _host in rep.hosts:
                     ET.SubElement(service, "rich_text", weight="heavy").text=scr['id']+"\n"
                     ET.SubElement(service, "rich_text").text=scr['output']+"\n"
 
-if dest_file == "" : 
+if dest_file is None : 
     tree = ET.ElementTree(root)
     tree.write(os.path.splitext(filename)[0] + ".ctd")
 else :
