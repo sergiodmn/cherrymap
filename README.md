@@ -8,6 +8,10 @@ Note that both XML and .nmap files have to be present in the same folder. We rec
 In case of merging the data into another CherryTree file (`-m` option), the utility will insert it as last node, with the filename as node name. 
 
 
+## Requirements
+
+ - `python3-libnmap`
+
 ## Usage
 
 ```

@@ -51,7 +51,7 @@ try:
     with open(filename.split(".")[0]+".nmap") as f: summary = f.read()
     ET.SubElement(node, "rich_text").text=summary
 except EnvironmentError:
-    print "Nmap file not found, the whole nmap output won't be added to document tree"
+    print("Nmap file not found, the whole nmap output won't be added to document tree")
 
 for _host in rep.hosts:
     if (_host.is_up() and len(_host.services)>0) or args.allhosts or args.all:
