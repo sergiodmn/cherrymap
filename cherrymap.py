@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import xml.etree.cElementTree as ET
 from libnmap.parser import NmapParser
 import os
