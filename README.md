@@ -5,8 +5,13 @@ Useful script to assist you during infrastructure assessments, importing to Cher
 
 Note that both XML and .nmap files have to be present in the same folder. We recommend using the option `-oA file2save` when doing the scan. 
 
+
+## Merging options
+
+This utility can merge the nmap scan inside another CherryTree file. **This file must be a non-protected XML file, otherwise ths utility won't work !**. 
 In case of merging the data into another CherryTree file (`-m` option), the utility will insert it as last node, with the filename as node name. 
 
+You can convert any other format by opening it in CherryTree, then clicking on `Export` > `Export to CherrtyTree document` and select `XML, Not protected (.ctd)`.
 
 ## Requirements
 
