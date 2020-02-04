@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import xml.etree.cElementTree as ET
+from lxml import etree as ET
 from libnmap.parser import NmapParser
 import os
 import argparse
@@ -41,9 +41,9 @@ else :
     
     # Find the biggest value of unique_id to properly set it on new items
     biggest_UID=0
-    for node in dest_tree_root.findall('.//node') :
-       if int(node.attrib['unique_id']) > biggest_UID:
-          biggest_UID = int(node.attrib['unique_id'])
+    for unique_id in dest_tree_root.xpath('//@unique_id') :
+       if int(unique_id) > biggest_UID:
+          biggest_UID = int(unique_id)
     uid=biggest_UID+1
     
     # Set the node as SubElement of the destionation file XML tree
