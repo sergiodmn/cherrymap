@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 import xml.etree.cElementTree as ET
 from libnmap.parser import NmapParser
 import os
@@ -35,16 +36,16 @@ if dest_file is None :
     uid=uid+1
 else :
     # Parse destination file
-    dest_tree_file = ET.parse(dest_file)
-    dest_tree = dest_tree_file.getroot()
+    dest_tree = ET.parse(dest_file)
+    dest_tree_root = dest_tree.getroot()
     
     # Find the last value of unique_id to properly set it on new items
-    nodeList = [node for node in dest_tree.findall('.//node') ]
+    nodeList = [node for node in dest_tree_root.findall('.//node') ]
     lastNode = nodeList[-1]
     uid=int(lastNode.attrib['unique_id'])+1
 
     # Set the node as SubElement of the destionation file XML tree
-    node = ET.SubElement(dest_tree, "node", custom_icon_id="0", foreground="", is_bold="False", name=os.path.basename(filename), prog_lang="custom-colors", readonly="False", tags="", unique_id=str(uid))
+    node = ET.SubElement(dest_tree_root, "node", custom_icon_id="0", foreground="", is_bold="False", name=os.path.basename(filename), prog_lang="custom-colors", readonly="False", tags="", unique_id=str(uid))
 
 try:
     # Locate the .nmap file to parse it as the Tree Node content
@@ -82,5 +83,5 @@ if dest_file is None :
     tree.write(os.path.splitext(filename)[0] + ".ctd")
 else :
     # Overwrite the destination file with the new XML tree 
-    with open(dest_file, 'w') as f:
-        f.write(ET.tostring(dest_tree))
+    with open(dest_file, 'wb') as f:
+        dest_tree.write(f)
