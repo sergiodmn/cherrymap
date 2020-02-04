@@ -39,11 +39,13 @@ else :
     dest_tree = ET.parse(dest_file)
     dest_tree_root = dest_tree.getroot()
     
-    # Find the last value of unique_id to properly set it on new items
-    nodeList = [node for node in dest_tree_root.findall('.//node') ]
-    lastNode = nodeList[-1]
-    uid=int(lastNode.attrib['unique_id'])+1
-
+    # Find the biggest value of unique_id to properly set it on new items
+    biggest_UID=0
+    for node in dest_tree_root.findall('.//node') :
+       if int(node.attrib['unique_id']) > biggest_UID:
+          biggest_UID = int(node.attrib['unique_id'])
+    uid=biggest_UID+1
+    
     # Set the node as SubElement of the destionation file XML tree
     node = ET.SubElement(dest_tree_root, "node", custom_icon_id="0", foreground="", is_bold="False", name=os.path.basename(filename), prog_lang="custom-colors", readonly="False", tags="", unique_id=str(uid))
 
