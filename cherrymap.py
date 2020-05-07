@@ -51,7 +51,7 @@ else :
 
 try:
     # Locate the .nmap file to parse it as the Tree Node content
-    with open(filename.split(".")[0]+".nmap") as f: summary = f.read()
+    with open(filename.rsplit('.',1)[0]+".nmap") as f: summary = f.read()
     ET.SubElement(node, "rich_text").text=summary
 except EnvironmentError:
     print("Nmap file not found, the whole nmap output won't be added to document tree")
