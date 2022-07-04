@@ -15,7 +15,8 @@ You can convert any other format by opening it in CherryTree, then clicking on `
 
 ## Requirements
 
- - `python3-libnmap`
+ - `lxml`
+ - `python-libnmap`
 
 ## Usage
 
