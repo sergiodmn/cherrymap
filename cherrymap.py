@@ -63,8 +63,8 @@ for _host in rep.hosts:
         fing = ET.SubElement(host, "rich_text")
         fp = str(_host.hostnames)+_host.os_fingerprint+"\n"
         if _host.os_fingerprinted:
-            for os in _host.os_match_probabilities():
-                fp = fp + os.name + "\n"
+            for os_match in _host.os_match_probabilities():
+                fp = fp + os_match.name + "\n"
         fing.text=fp
         for  _service in _host.services:
             if _service.open() or args.allports or args.all:
@@ -82,7 +82,8 @@ for _host in rep.hosts:
 
 if dest_file is None : 
     tree = ET.ElementTree(root)
-    tree.write(os.path.splitext(filename)[0] + ".ctd")
+    name = os.path.splitext(filename)[0] + ".ctd"
+    tree.write(name)
 else :
     # Overwrite the destination file with the new XML tree 
     with open(dest_file, 'wb') as f:
